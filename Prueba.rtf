@@ -1,0 +1,165 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red153\green168\blue186;\red32\green32\blue32;\red117\green114\blue185;
+\red88\green118\blue71;\red191\green100\blue38;\red86\green132\blue173;\red254\green187\blue91;\red191\green100\blue38;
+\red32\green32\blue32;\red153\green168\blue186;\red160\green0\blue163;\red128\green63\blue122;\red88\green118\blue71;
+\red86\green132\blue173;}
+{\*\expandedcolortbl;;\csgenericrgb\c60000\c65882\c72941;\csgenericrgb\c12549\c12549\c12549;\csgenericrgb\c45882\c44706\c72549;
+\csgenericrgb\c34510\c46275\c27843;\csgenericrgb\c74902\c39216\c14902;\csgenericrgb\c33725\c51765\c67843;\csgenericrgb\c99608\c73333\c35686;\csgenericrgb\c74902\c39216\c14902;
+\csgenericrgb\c12549\c12549\c12549;\csgenericrgb\c60000\c65882\c72941;\csgenericrgb\c62745\c0\c63922;\csgenericrgb\c50196\c24706\c47843;\csgenericrgb\c34510\c46275\c27843;
+\csgenericrgb\c33725\c51765\c67843;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \cb3 CALCULATOR\
+num1 = \cf4 float\cf2 (\cf4 input\cf2 (\cf5 "Enter first number: "\cf2 ))\
+op = \cf4 input\cf2 (\cf5 "Enter operator: "\cf2 )\
+num2 = \cf4 float\cf2 (\cf4 input\cf2 (\cf5 "Enter second number: "\cf2 ))\
+\
+\cf6 if \cf2 op == \cf5 "+"\cf2 :\
+    \cf4 print\cf2 (num1 + num2)\
+\cf6 elif \cf2 op == \cf5 "-"\cf2 :\
+    \cf4 print\cf2 (num1- num2)\
+\cf6 elif \cf2 op == \cf5 "/"\cf2 :\
+    \cf4 print\cf2 (num1 / num2)\
+\cf6 elif \cf2 op == \cf5 "*"\cf2 :\
+    \cf4 print\cf2 (num1 * num2)\
+\cf6 else\cf2 :\
+    \cf4 print\cf2 (\cf5 "Invalid operator"\cf2 )\
+\
+\
+\
+MONTHS\
+monthConversions = \{\
+    \cf7 0\cf2 : \cf5 "January"\cf6 ,\
+    \cf5 "Feb"\cf2 : \cf5 "February"\cf6 ,\
+    \cf5 "Mar"\cf2 : \cf5 "March"\cf6 ,\
+    \cf5 "Apr"\cf2 : \cf5 "April"\cf6 ,\
+\cf2 \}\
+\cf4 print\cf2 (monthConversions.get(\cf7 2\cf6 , \cf5 "Not a valid key"\cf2 ))\
+\
+\
+WHILE\
+i = \cf7 2\
+\cf6 while \cf2 i < \cf7 10\cf2 :\
+    \cf4 print\cf2 (i)\
+    i += \cf7 2\
+\
+\cf4 print\cf2 (\cf5 "Done with loop"\cf2 )\
+\
+\
+\
+Guess Game\
+secret_word = \cf5 "giraffe"\
+\cf2 guess = \cf5 ""\
+\cf2 guess_count = \cf7 0\
+\cf2 guess_limit = \cf7 3\
+\cf2 out_of_guesses = \cf6 False\
+\
+while \cf2 guess != secret_word \cf6 and not \cf2 (out_of_guesses):\
+    \cf6 if \cf2 guess_count < guess_limit:\
+        guess = \cf4 input \cf2 (\cf5 "Enter guess: "\cf2 )\
+        guess_count += \cf7 1\
+    \cf6 else\cf2 :\
+        out_of_guesses = \cf6 True\
+if \cf2 out_of_guesses:\
+    \cf4 print\cf2 (\cf5 "You lost."\cf2 )\
+\cf6 else\cf2 :\
+    \cf4 print\cf2 (\cf5 "Nice."\cf2 )\
+\
+\
+For	function\
+friends = [\cf5 "Jim"\cf6 , \cf5 "Karen"\cf6 , \cf5 "Kevin"\cf2 ]\
+\cf6 for \cf2 name \cf6 in \cf4 range\cf2 (\cf4 len\cf2 (friends)):\
+    \cf4 print\cf2 (friends[name])\
+\
+\cf6 for \cf2 index \cf6 in \cf4 range \cf2 (\cf7 5\cf2 ):\
+    \cf6 if \cf2 index == \cf7 0\cf2 :\
+        \cf4 print\cf2 (\cf5 "first Iteration"\cf2 )\
+    \cf6 else\cf2 :\
+        \cf4 print\cf2 (\cf5 "Not first"\cf2 )\
+\
+Exp\
+\cf6 def \cf8 raise_to_power\cf2 (base_num\cf6 , \cf2 pow_num):\
+    result = \cf7 1\
+    \cf6 for \cf2 index \cf6 in \cf4 range\cf2 (pow_num):\
+        result = result * base_num\
+    \cf6 return \cf2 result\
+\
+\cf4 print\cf2 (raise_to_power(\cf7 9\cf6 , \cf7 5\cf2 ))\
+\
+2d row col\
+number_grid = [\
+    [\cf7 1\cf6 , \cf7 2\cf6 , \cf7 3\cf2 ]\cf6 ,\
+    \cf2 [\cf7 4\cf6 , \cf7 5\cf6 , \cf7 6\cf2 ]\cf6 ,\
+    \cf2 [\cf7 7\cf6 , \cf7 8\cf6 , \cf7 9\cf2 ]\cf6 ,\
+    \cf2 [\cf7 0\cf2 ]\
+]\
+\cf6 for \cf2 row \cf6 in \cf2 number_grid:\
+    \cf6 for \cf2 col \cf6 in \cf2 row:\
+        \cf4 print\cf2 (col)\
+\
+\
+Traductor\
+\cf6 def \cf8 translate\cf2 (phrase):\
+    translation = \cf5 ""\
+    \cf6 for \cf2 letter \cf6 in \cf2 phrase:\
+        \cf6 if \cf2 letter.lower() \cf6 in \cf5 "aeiou"\cf2 :\
+            \cf6 if \cf2 letter.isupper():\
+                translation = translation + \cf5 "I"\
+            \cf6 else\cf2 :\
+                translation = translation + \cf5 "i"\
+        \cf6 else\cf2 :\
+            translation = translation + letter\
+    \cf6 return \cf2 translation\
+\
+\cf4 print\cf2 (translate(\cf4 input\cf2 (\cf5 "Enter a phrase: "\cf2 )))\
+\
+#Divided by zero\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf2 \cb3 \
+\
+
+\f0 \cf6 try\cf2 :\
+    value = \cf7 10\cf2 /\cf7 0\
+    \cf2 number = \cf4 int\cf2 (\cf4 input\cf2 (\cf5 "Enter a number"\cf2 ))\
+    \cf4 print\cf2 (number)\
+\cf6 except \cf4 ZeroDivisionError \cf6 as \cf2 err:\
+    \cf4 print\cf2 (err)\
+\cf6 except \cf4 ValueError\cf2 :\
+    \cf4 print\cf2 (\cf5 "Invalid input"\cf2 )\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \cb3 \
+\
+#Read files\
+\
+open(\'93employees.txt\'94 , \'93r\'94) #or , \'93a\'94, \'93r+\'94, \'93w\'94\
+\
+employee_file = open(\'93employees.txt\'94 , \'93r\'94)\
+For employee in employee_file.readlines():\
+print(employee)\
+print(employee_file.readable())\
+print(employee_file.read()) #or .readline, headlines\
+employee_file.close()\
+\
+List of python moduls docs.python.org\
+\
+Students\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf9 \cb10 class \cf11 Student:\
+    \cf9 def \cf12 __init__\cf11 (\cf13 self\cf9 , \cf11 name\cf9 , \cf11 major\cf9 , \cf11 gpa\cf9 , \cf11 is_on_probation):\
+        \cf13 self\cf11 .name = name\
+        \cf13 self\cf11 .major = major\
+        \cf13 self\cf11 .gpa = gpa\
+        \cf13 self\cf11 .is_on_probation = is_on_probation\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \cb3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf9 \cb10 from \cf11 Student \cf9 import \cf11 Student\
+student1 = Student(\cf14 "Jim"\cf9 , \cf14 "Business"\cf9 , \cf15 3.1\cf9 , False\cf11 )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \cb3 \
+\
+}
